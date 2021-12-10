@@ -45,6 +45,7 @@ import (
 	"github.com/open-telemetry/opentelemetry-collector-contrib/receiver/hostmetricsreceiver"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/receiver/jaegerreceiver"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/receiver/journaldreceiver"
+	"github.com/open-telemetry/opentelemetry-collector-contrib/receiver/jmxreceiver"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/receiver/k8sclusterreceiver"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkametricsreceiver"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver"
@@ -101,6 +102,7 @@ func Get() (component.Factories, error) {
 		filelogreceiver.NewFactory(),
 		jaegerreceiver.NewFactory(),
 		journaldreceiver.NewFactory(),
+		jmxreceiver.NewFactory(),
 		k8sclusterreceiver.NewFactory(),
 		kafkametricsreceiver.NewFactory(),
 		kafkareceiver.NewFactory(),
