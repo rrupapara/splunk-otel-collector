@@ -197,9 +197,9 @@ download_and_jmx_jar() {
     local build_dir="$2"
     local output_dir="$3"
     JMX_LIB_RELEASE_DL_URL="https://repo1.maven.org/maven2/io/opentelemetry/contrib/opentelemetry-jmx-metrics/$version/opentelemetry-jmx-metrics-$version.jar"
-    echo "Downloading ${dl_url}..."
+    echo "Downloading ${JMX_LIB_RELEASE_DL_URL}..."
 
-    curl -sL "$dl_url" -o "${build_dir}/opentelemetry-java-contrib-jmx-metrics.jar"
+    curl -sL "$JMX_LIB_RELEASE_DL_URL" -o "${build_dir}/opentelemetry-java-contrib-jmx-metrics.jar"
     mv "${build_dir}/opentelemetry-java-contrib-jmx-metrics.jar" "$output_dir"
     
     # Delete unnecessary files.

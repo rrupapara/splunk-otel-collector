@@ -29,7 +29,7 @@ RUN Rename-Item -Path "SignalFxAgent" -NewName "agent-bundle"
 # Download JMX Metric Gatherer
 ARG JMX_LIB_VERSION
 RUN New-Item -Path "C:\\" -Name "opt" -ItemType "directory"
-RUN Invoke-WebRequest -Uri "https://repo1.maven.org/maven2/io/opentelemetry/contrib/opentelemetry-java-contrib-jmx-metrics/$env:JMX_LIB_VERSION/opentelemetry-java-contrib-jmx-metrics-$env:JMX_LIB_VERSION.jar" -Outfile "c:\opt\opentelemetry-java-contrib-jmx-metrics.jar"
+RUN Invoke-WebRequest -Uri "https://repo1.maven.org/maven2/io/opentelemetry/contrib/opentelemetry-jmx-metrics/$env:JMX_LIB_VERSION/opentelemetry-jmx-metrics-$env:JMX_LIB_VERSION.jar" -Outfile "c:\opt\opentelemetry-java-contrib-jmx-metrics.jar"
 
 ARG JAVA_VERSION="11-openjdk-11.0.13.8-1"
 ARG JAVA_ZIP_VERSION="11-openjdk-jre-11.0.13.8-1"
