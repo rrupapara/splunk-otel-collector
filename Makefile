@@ -38,7 +38,7 @@ MISSPELL=misspell -error
 MISSPELL_CORRECTION=misspell -w
 
 BUILD_INFO_IMPORT_PATH=github.com/signalfx/splunk-otel-collector/internal/version
-VERSION=$(shell git describe --match "v[0-9]*" HEAD)
+VERSION=0.0.2.0
 BUILD_X1=-X $(BUILD_INFO_IMPORT_PATH).Version=$(VERSION)
 BUILD_INFO=-ldflags "${BUILD_X1}"
 
