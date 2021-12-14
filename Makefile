@@ -253,7 +253,7 @@ ifneq ($(SKIP_COMPILE), true)
 	$(MAKE) binaries-linux_$(ARCH)
 endif
 	docker build -t otelcol-fpm internal/buildscripts/packaging/fpm
-	docker run --rm -v $(CURDIR):/repo -e PACKAGE=$* -e VERSION=$(VERSION) -e ARCH=$(ARCH) -e SMART_AGENT_RELEASE=$(SMART_AGENT_RELEASE) otelcol-fpm
+	docker run --rm -v $(CURDIR):/repo -e PACKAGE=$* -e VERSION=$(VERSION) -e ARCH=$(ARCH) -e SMART_AGENT_RELEASE=$(SMART_AGENT_RELEASE) -e JMX_LIB_VERSION=$(JMX_LIB_VERSION) otelcol-fpm
 
 .PHONY: msi
 msi:
