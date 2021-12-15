@@ -5,8 +5,8 @@ name: Puppet
 
 on:
   push:
-   paths:
-     - 'deployments/puppet/metadata.json'
+    paths:
+      - 'deployments/puppet/metadata.json'
 
 permissions:
   contents: write
